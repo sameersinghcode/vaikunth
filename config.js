@@ -14,18 +14,18 @@ const SITE = {
   announcement: "Founding collection now open · Complimentary white glove delivery in Delhi NCR",
 
   // Contact — replace with your real details
-  whatsapp: "919999999999",        // country code + number, no + sign
-  email: "hello@vaikunth.in",
-  phone: "+91 99999 99999",
+  whatsapp: "919896170317",        // country code + number, no + sign
+  email: "sameergr20@gmail.com",
+  phone: "+91 98961 70317",
   address: "Karnal, Haryana, India",
   instagram: "https://instagram.com/vaikunth",
 
   hero: {
-    image: "images/hero.jpg",   // your big cover photo. 1920x1200px, dark/moody furniture shot
+    image: "images/hero.jpeg",   // your big cover photo. 1920x1200px, dark/moody furniture shot
     eyebrow: "Handcrafted in Karnal since generations of soil and wood",
     title: "The Divine Abode,\nBuilt Into Furniture",
     sub: "Solid wood pieces made slowly, by hand, for homes that deserve permanence.",
-    cta: "Explore the Collection"
+    cta: "A Unit of Grace of God Organic Karnal"
   },
 
   story: {
@@ -48,7 +48,7 @@ const SITE = {
 
   products: [
     { id: "rajvansh-sofa", name: "Rajvansh Three Seater Sofa", collection: "living", price: 145000,
-      image: "images/placeholder.svg",
+      image: "images/rajvansh-sofa.png",
       desc: "A deep, upright three seater in seasoned sheesham with hand tied cushioning. The kind of sofa a house is arranged around.",
       wood: "Sheesham (Indian Rosewood)", dimensions: "210 × 90 × 85 cm", finish: "Hand rubbed walnut oil" },
     { id: "aramya-chair", name: "Aramya Lounge Chair", collection: "living", price: 58000,
@@ -72,7 +72,7 @@ const SITE = {
       desc: "A long low sideboard with hand carved fluted doors and brass ring pulls. Storage that behaves like sculpture.",
       wood: "Sheesham", dimensions: "160 × 45 × 80 cm", finish: "Dark walnut oil" },
     { id: "nidra-bed", name: "Nidra King Bed", collection: "bedroom", price: 165000,
-      image: "images/placeholder.svg",
+      image: "images/nidra1-bed.png",
       desc: "A king bed with a tall arched headboard, our signature silhouette. Joinery so solid it never learns to creak.",
       wood: "Sheesham", dimensions: "193 × 203 cm, headboard 130 cm", finish: "Hand rubbed walnut oil" },
     { id: "chandani-bedside", name: "Chandani Bedside Table", collection: "bedroom", price: 28000,
