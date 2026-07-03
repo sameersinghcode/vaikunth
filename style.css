@@ -1,0 +1,143 @@
+/* VAIKUNTH design system — edit config.js for content; this file controls look */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@300;400;500;600&display=swap');
+
+:root{
+  --ink:#181511;          /* charcoal */
+  --ink-2:#221E18;        /* raised surface */
+  --ink-3:#2C2620;        /* card */
+  --gold:#C9A05C;         /* antique gold */
+  --gold-soft:#A98B58;
+  --ivory:#F1EAE0;
+  --stone:#9A9086;
+  --line:rgba(201,160,92,.28);
+  --display:'Marcellus',serif;
+  --body:'Figtree',sans-serif;
+  --arch:999px 999px 0 0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--ivory);font-family:var(--body);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.15;letter-spacing:.01em}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.gold-line{width:56px;height:1px;background:var(--gold);margin:22px 0}
+
+/* Announcement + Nav */
+.announce{background:var(--gold);color:var(--ink);text-align:center;font-size:12.5px;font-weight:500;letter-spacing:.06em;padding:9px 16px}
+nav{position:sticky;top:0;z-index:50;background:rgba(24,21,17,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--display);font-size:24px;letter-spacing:.32em;color:var(--gold)}
+.nav-links{display:flex;gap:34px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.nav-links a{color:var(--stone);transition:color .3s}
+.nav-links a:hover,.nav-links a.on{color:var(--gold)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--gold);font-size:20px;padding:4px 12px;cursor:pointer}
+
+/* Hero */
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;
+  background:radial-gradient(60% 90% at 50% 110%,rgba(201,160,92,.16),transparent 65%),var(--ink)}
+.hero-img{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,21,17,.55),rgba(24,21,17,.75) 70%,var(--ink))}
+.hero .wrap,.hero-arch{position:relative;z-index:1}
+.hero-arch{position:absolute;inset:auto 0 -32vh 0;margin:0 auto;width:min(78vw,760px);height:110vh;border:1px solid var(--line);border-radius:var(--arch);pointer-events:none;will-change:transform}
+.hero-arch.b{width:min(64vw,620px);opacity:.5}
+.hero h1{font-size:clamp(42px,7vw,84px);white-space:pre-line;margin:18px 0 22px}
+.hero p{color:var(--stone);max-width:520px;margin:0 auto 38px;font-size:17px}
+.btn{display:inline-block;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:16px 38px;transition:background .3s,transform .3s}
+.btn:hover{background:var(--ivory);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn.ghost:hover{background:var(--gold);color:var(--ink)}
+
+/* Sections */
+section{padding:110px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 64px}
+.sec-head h2{font-size:clamp(30px,4vw,46px)}
+.sec-head p{color:var(--stone);margin-top:14px}
+
+/* Cards + grids */
+.grid{display:grid;gap:28px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{perspective:900px}
+.card-in{background:var(--ink-2);border:1px solid transparent;transition:border-color .4s,transform .4s;transform-style:preserve-3d;will-change:transform}
+.card:hover .card-in{border-color:var(--line)}
+.frame{aspect-ratio:4/5;border-radius:var(--arch);overflow:hidden;background:var(--ink-3);border:1px solid var(--line);border-bottom:none}
+.card-body{padding:22px;text-align:center}
+.card-body h3{font-size:19px;margin-bottom:6px}
+.price{color:var(--gold);font-size:14px;letter-spacing:.08em}
+.coll-name{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--stone);margin-bottom:8px}
+
+/* Story band */
+.band{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.split .frame{aspect-ratio:3/4}
+.split p{color:var(--stone);font-size:16.5px}
+
+/* Craft */
+.craft{border-top:1px solid var(--line);padding-top:44px}
+.craft h3{font-size:21px;color:var(--gold);margin-bottom:12px}
+.craft p{color:var(--stone);font-size:15px}
+
+/* Product page */
+.pd{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:80px 0;align-items:start}
+.pd .frame{aspect-ratio:4/5;position:sticky;top:100px}
+.pd h1{font-size:clamp(32px,4vw,48px);margin:10px 0 8px}
+.pd .price{font-size:20px}
+.pd .desc{color:var(--stone);margin:26px 0;font-size:16.5px}
+.spec{display:grid;grid-template-columns:130px 1fr;gap:10px 20px;font-size:14.5px;border-top:1px solid var(--line);padding-top:24px;margin-bottom:34px}
+.spec dt{color:var(--gold);letter-spacing:.08em;text-transform:uppercase;font-size:11.5px;padding-top:2px}
+.spec dd{color:var(--ivory)}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+
+/* About */
+.about p{color:var(--stone);font-size:17px;margin-bottom:22px;max-width:680px}
+.promise{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px;max-width:680px}
+.promise div{border:1px solid var(--line);padding:18px 22px;font-size:14.5px;color:var(--ivory)}
+.promise div::before{content:"— ";color:var(--gold)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.c-item{margin-bottom:26px}
+.c-item .eyebrow{margin-bottom:6px}
+.c-item a{font-size:19px;font-family:var(--display)}
+.c-item a:hover{color:var(--gold)}
+form{display:grid;gap:16px}
+input,textarea{background:var(--ink-2);border:1px solid var(--line);color:var(--ivory);font-family:var(--body);font-size:15px;padding:15px 18px;width:100%}
+input:focus,textarea:focus{outline:1px solid var(--gold)}
+label{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone)}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:64px 0 40px;background:var(--ink-2)}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;margin-bottom:44px}
+.f-grid .logo{margin-bottom:14px;display:block}
+.f-grid p,.f-grid a{color:var(--stone);font-size:14px;display:block;margin-bottom:8px}
+.f-grid a:hover{color:var(--gold)}
+.f-head{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.f-bottom{border-top:1px solid var(--line);padding-top:26px;font-size:12.5px;color:var(--stone);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* WhatsApp float */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-size:26px;box-shadow:0 8px 30px rgba(0,0,0,.45);transition:transform .3s}
+.wa-float:hover{transform:scale(1.08)}
+
+/* Reveal animation */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-arch{display:none}
+  html{scroll-behavior:auto}
+}
+@media(max-width:920px){
+  .g3,.g4{grid-template-columns:repeat(2,1fr)}
+  .split,.pd,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .pd .frame{position:static}
+  .f-grid{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--ink-2);flex-direction:column;padding:26px;gap:20px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  section{padding:76px 0}
+}
+@media(max-width:560px){.g3,.g4{grid-template-columns:1fr}.promise{grid-template-columns:1fr}}
