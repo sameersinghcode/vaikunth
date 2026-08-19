@@ -39,6 +39,24 @@ const SITE = {
     text: "Shiv Kripa Decors brings together the finest hand-carved solid wood furniture of our region under one roof. Every piece is chosen for its joinery, its grain and its finish — furniture meant to be kept, repaired, and passed on. We deal with you directly, and we stand behind every piece we sell."
   },
 
+  /* THE MAKING — real workshop photos. Edit captions or swap images here.
+     Add/remove items freely; the grid adjusts on its own. */
+  making: {
+    eyebrow: "Inside The Workshop",
+    title: "Made By Hand, In Karnal",
+    text: "Every piece begins as seasoned solid wood and a craftsman's chisel — no CNC, no shortcuts. Floral panels pierced by hand, legs shaped by eye, joints cut to last a generation.",
+    images: [
+      { src: "images/making-1.jpg", caption: "Carved by hand, on the workshop floor" },
+      { src: "images/making-2.jpg", caption: "Chisel and mallet — never a machine" },
+      { src: "images/making-4.jpg", caption: "Floral panels, pierced by hand" },
+      { src: "images/making-3.jpg", caption: "Every leg shaped by eye" },
+      { src: "images/making-8.jpg", caption: "Built solid, joint by joint" },
+      { src: "images/making-5.jpg", caption: "A crest, before it meets the frame" },
+      { src: "images/making-6.jpg", caption: "Seasoned wood, ready for finish" },
+      { src: "images/making-7.jpg", caption: "A mirror frame takes shape" }
+    ]
+  },
+
   /* The cinematic making-of section is turned off for now.
      To switch it on later, replace null with an atelier: {...} block. */
   atelier: null,

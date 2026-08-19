@@ -9,6 +9,7 @@ function shell(active){
   const navItems = [
     { id:"index",       href:"index.html",              label:"Home" },
     { id:"collections", href:"collections.html",        label:"Collections" },
+    { id:"making",      href:"index.html#making",       label:"Workshop" },
     { id:"about",       href:"about.html",              label:"Our Story" },
     { id:"contact",     href:"contact.html",            label:"Contact" }
   ];
@@ -58,6 +59,7 @@ function renderHome(){
   q("#story-title").textContent = SITE.story.title;
   q("#story-text").textContent = SITE.story.text;
   renderAtelier();
+  renderMaking();
   // parallax on hero arches
   const arches = document.querySelectorAll(".hero-arch");
   addEventListener("scroll",()=>{const y=scrollY;arches.forEach((a,i)=>a.style.transform=`translateY(${y*(i?.06:.1)}px)`)},{passive:true});
@@ -90,6 +92,17 @@ function renderAtelier(){
       </div>
     </div>`;
   }).join("");
+}
+
+/* ------- THE MAKING (workshop photo grid on the homepage) ------- */
+function renderMaking(){
+  const m = SITE.making; const el = q("#making"); if(!m || !el) return;
+  el.innerHTML = `<div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow">${m.eyebrow}</div><h2>${m.title}</h2><p>${m.text}</p></div>
+    <div class="making-grid">
+      ${m.images.map(im=>`<figure class="making-item rv"><img src="${im.src}" alt="${im.caption}" loading="lazy"><figcaption>${im.caption}</figcaption></figure>`).join("")}
+    </div>
+  </div>`;
 }
 
 /* ------- COLLECTIONS ------- */
