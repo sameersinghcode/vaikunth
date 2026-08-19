@@ -16,7 +16,7 @@
 const SITE = {
   brand: "SHIV KRIPA DECORS",
   tagline: "Royal furniture, made to be kept",
-  announcement: "Now taking orders across North India · Free delivery & placement in Karnal, Panipat & Kurukshetra",
+  announcement: "Hand-carved solid wood furniture from Karnal, Haryana · Now taking orders across North India",
 
   // Contact — your real details
   whatsapp: "919896170317",
