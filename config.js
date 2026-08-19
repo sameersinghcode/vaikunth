@@ -72,7 +72,7 @@ const SITE = {
       made: "The headboard is carved by hand and finished with a damask panel framed in gold-leaf moulding. A heavy, seasoned sheesham frame beneath keeps it silent for decades. This is a statement piece — built to be the first thing you see and the last thing you replace." },
 
     { id: "rajwada-carved-king", name: "Rajwada Carved King Bed", collection: "beds", price: 78000,
-      images: ["images/rajwada-carved-king-1.jpg"],
+      images: ["images/rajwada-carved-king-1.jpg","images/rajwada-carved-king-2.jpg","images/rajwada-carved-king-3.jpg","images/rajwada-carved-king-4.jpg","images/rajwada-carved-king-5.jpg"],
       desc: "A tall arched headboard, hand-carved and softly tufted, on a solid wood frame. Classic havelī grandeur for a modern bedroom.",
       wood: "Seasoned sheesham", dimensions: "King · 78 x 72 in", finish: "Hand-rubbed walnut, tufted upholstery",
       made: "An arched headboard carved from solid sheesham, its crown worked by hand and its centre panel hand-tufted. Mortise-and-tenon joinery locks the frame — grand enough for the house, quiet enough for sleep." },
