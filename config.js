@@ -1,228 +1,201 @@
 /* ============================================================
-   VAIKUNTH — SITE CONFIG
+   SHIV KRIPA DECORS — SITE CONFIG
    This is the ONLY file you edit to manage the website.
    Change text, prices, products, images here. Save. Push. Done.
 
-   IMAGE / VIDEO PATHS
-   -------------------
-   • Product images: put 5 photos per product in the images/ folder,
+   IMAGE PATHS
+   -----------
+   • Product images: photos live in the images/ folder,
      named like images/<product-id>-1.jpg through -5.jpg.
      Update the images: [...] array below to match.
-   • Hero background video: video/hero.mp4  (silent, 10-25s loop)
-   • Atelier hero video:    video/atelier.mp4
-   • Process step videos:   video/atelier-01.mp4 … video/atelier-05.mp4
-   • Scene / room photos:   images/scene-<name>.jpg
-   Leave a video field as "" to fall back to the poster image.
+   • Hero background image: images/hero-shivkripa.jpg
+     (set hero.video to a .mp4 path later for a moving hero)
+   Best product size: 800 x 1000 px (4:5, portrait). JPG under 300 KB.
    ============================================================ */
 
 const SITE = {
-  brand: "VAIKUNTH",
-  tagline: "Furniture fit for a palace",
-  announcement: "Founding collection now open · Complimentary white glove delivery across North India",
+  brand: "SHIV KRIPA DECORS",
+  tagline: "Royal furniture, made to be kept",
+  announcement: "Now taking orders across North India · Free delivery & placement in Karnal, Panipat & Kurukshetra",
 
-  // Contact — replace with your real details
+  // Contact — your real details
   whatsapp: "919896170317",
   email: "sameergr20@gmail.com",
   phone: "+91 98961 70317",
   address: "Karnal, Haryana, India",
-  instagram: "https://instagram.com/vaikunth",
+  instagram: "https://instagram.com/shivkripadecors",
 
   hero: {
     video: "",                        // e.g. "video/hero.mp4"
-    poster: "images/hero.jpeg",
-    eyebrow: "Handcrafted in Karnal · Since generations",
+    poster: "images/hero-shivkripa.jpg",
+    eyebrow: "Solid wood · Hand-carved · Karnal",
     title: "Furniture Fit\nFor A Palace",
-    sub: "Royal beds, hand-carved sofa sets, dining and dressers. Made by master craftsmen in solid seasoned wood.",
+    sub: "Royal beds, hand-carved sofa sets, dressing tables and almirahs in seasoned solid wood. Built to last a generation, priced for a home.",
     cta: "Explore The Collection"
   },
 
   story: {
     title: "Rooted in Grace",
-    text: "Vaikunth is the eternal abode. We chose the name because a home is the closest thing to it we build in one lifetime. Born from the family behind Grace of God Organic, we bring the same patience we give our plants to seasoned wood, hand joinery, and finishes that only deepen with the years. Every piece is made to be kept, repaired, and passed on."
+    text: "Shiv Kripa Decors brings together the finest hand-carved solid wood furniture of our region under one roof. Every piece is chosen for its joinery, its grain and its finish — furniture meant to be kept, repaired, and passed on. We deal with you directly, and we stand behind every piece we sell."
   },
 
-  /* THE ATELIER — cinematic making-of section on the homepage.
-     Set atelier.hero.video to your compilation .mp4 when ready.
-     Each step below can play its own short loop, or fall back to poster. */
-  atelier: {
-    hero: {
-      video: "",                              // e.g. "video/atelier.mp4"
-      poster: "images/atelier-hero.jpg",
-      eyebrow: "Inside The Atelier",
-      title: "A House Built,\nThe Old Way.",
-      text: "In our Karnal workshop, seasoned wood meets patient hands. Every joint is set by a master carpenter, every carving cut from memory before it is cut by tool. No production line. No shortcut. Only the quiet discipline of making one piece well, before beginning the next."
-    },
-    steps: [
-      { eyebrow: "01 · The Wood",
-        title: "Grain, Chosen By Hand",
-        video: "",                            // e.g. "video/atelier-01.mp4"
-        poster: "images/atelier-01-wood.jpg",
-        text: "Sheesham and teak, air-dried under our own roof for years before they are ever touched. Wood chosen board by board, grain read like handwriting. A piece cannot be older than the tree it came from — but it can be almost as calm." },
-      { eyebrow: "02 · The Drawing",
-        title: "Every Piece, First On Paper",
-        video: "",
-        poster: "images/atelier-02-design.jpg",
-        text: "Nothing enters the workshop until it has passed the sketch. Full-size drawings in charcoal, proportions tuned by eye, silhouettes traced from Rajasthani havelis and Mughal courts. Old references, new lines." },
-      { eyebrow: "03 · The Joinery",
-        title: "The Bones Of A Piece",
-        video: "",
-        poster: "images/atelier-03-joinery.jpg",
-        text: "Mortise and tenon, dovetail, dowel. Joints cut by hand and dry-fit before glue is even warmed. This is where a piece earns the right to last a hundred years. Everything you'll see later depends on what happens here." },
-      { eyebrow: "04 · The Carving",
-        title: "Cut From Memory",
-        video: "",
-        poster: "images/atelier-04-carving.jpg",
-        text: "Floral panels, fluted columns, lotus feet — worked in with chisel and mallet by carvers who learned this trade from their fathers. No CNC. No template. Every carving is a little different, on purpose." },
-      { eyebrow: "05 · The Finish",
-        title: "Oiled, Rubbed, Aged",
-        video: "",
-        poster: "images/atelier-05-finish.jpg",
-        text: "Hand-rubbed walnut oil, brass polished by hand, upholstery hand-stitched in premium velvet or full-grain leather. Finishing is not a step — it is a season. And it is what makes the piece feel, from the first touch, like it has already lived a lifetime with you." }
-    ]
-  },
+  /* The cinematic making-of section is turned off for now.
+     To switch it on later, replace null with an atelier: {...} block. */
+  atelier: null,
 
-  /* Kept for reference — no longer rendered. Atelier above replaces this. */
+  /* Kept for reference — not rendered. */
   craft: [
     { title: "Solid Wood Frames", text: "Seasoned sheesham and teak under every piece." },
-    { title: "Hand-Carved Detail", text: "Chisel, mallet, memory. No CNC." },
-    { title: "Finishes For Generations", text: "Hand-rubbed oil, premium velvet, full-grain leather." }
+    { title: "Hand-Carved Detail", text: "Carved by master craftsmen of our region." },
+    { title: "Finishes For Generations", text: "Hand-rubbed oil, premium fabric, full-grain detail." }
   ],
 
   collections: [
-    { id: "beds",    name: "Royal Beds",           desc: "King and queen beds with hand-carved headboards, built to hold the quietest hours of a house." },
-    { id: "sofas",   name: "Sofa Sets",            desc: "Royal, modern and curved sofa sets. Deep seats, tight joinery, upholstery that endures." },
-    { id: "dining",  name: "Dining",               desc: "Solid-top dining tables and full sets, built for long meals and longer conversations." },
-    { id: "storage", name: "Wardrobes & Dressers", desc: "Almirahs, dressing tables and vanity chests, hand-carved and mirrored where it matters." }
+    { id: "beds",     name: "Royal Beds",      desc: "King beds with hand-carved and upholstered headboards, built to hold the quietest hours of a house." },
+    { id: "sofas",    name: "Sofa Sets",       desc: "Royal carved and modern sofa sets. Deep seats, solid frames, upholstery that endures." },
+    { id: "dressing", name: "Dressing Tables", desc: "Carved dressing tables and vanity chests, mirrored where it matters." },
+    { id: "almirah",  name: "Almirahs",        desc: "Solid wood wardrobes with hand-carved panels, deep interiors and quiet grandeur." }
   ],
 
-  /* Global room-scene visualisations — shown on every product page.
-     One set for the whole site keeps the shoot budget sane; you can
-     override per-product later by adding a scenes: [...] array to a product. */
-  scenes: [
-    { name: "The Alpine Villa",  image: "images/scene-alpine.jpg",
-      desc: "Wide windows, cold light, long views of pine and stone." },
-    { name: "The Beach House",   image: "images/scene-beach.jpg",
-      desc: "Open shutters, warm sand light, sea breeze on wood." },
-    { name: "The Warm Study",    image: "images/scene-study.jpg",
-      desc: "A single lamp, a heavy rug, the smell of old books." },
-    { name: "The Family Room",   image: "images/scene-family.jpg",
-      desc: "The room where dinner ends and evenings begin." },
-    { name: "The City Loft",     image: "images/scene-loft.jpg",
-      desc: "Concrete, glass, and one piece that softens all of it." }
-  ],
+  /* One set of room scenes for the whole site. Empty = not shown. */
+  scenes: [],
 
   /* PRODUCTS
-     images[]: 5 photos per product — primary, 3/4 angle, detail crop, back, in-context.
-     "made"  : short royal narrative shown on the product page.  */
+     images[]: real photos, primary first.
+     "made"  : short narrative shown on the product page. */
   products: [
     /* ---------- BEDS ---------- */
-    { id: "nidra-king-bed", name: "Nidra King Bed", collection: "beds", price: 185000,
-      images: ["images/nidra1-bed.png","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A king bed with a tall arched headboard, our signature silhouette. Joinery so solid it never learns to creak.",
-      wood: "Sheesham (Indian Rosewood)", dimensions: "193 × 203 cm · headboard 130 cm", finish: "Hand rubbed walnut oil",
-      made: "The arched headboard begins as a single seasoned sheesham plank, chosen for its grain and drawn full-size in charcoal before the first cut. Mortise-and-tenon joinery locks the frame; brass rosettes are pinned by hand. Twenty-two days from first cut to final polish, and three coats of hand-rubbed walnut oil, each allowed to rest a full week before the next." },
+    { id: "maharaja-gold-king", name: "Maharaja Gold Damask King Bed", collection: "beds", price: 95000,
+      images: ["images/maharaja-gold-king-1.jpg","images/maharaja-gold-king-2.jpg","images/maharaja-gold-king-3.jpg","images/maharaja-gold-king-4.jpg","images/maharaja-gold-king-5.jpg"],
+      desc: "A king bed crowned by an ornate gold-and-black damask headboard, carved and gilded along every edge. The single grandest piece a bedroom can hold.",
+      wood: "Seasoned sheesham, gilded carving", dimensions: "King · 78 x 72 in", finish: "Hand-carved, gold-leaf detailing",
+      made: "The headboard is carved by hand and finished with a damask panel framed in gold-leaf moulding. A heavy, seasoned sheesham frame beneath keeps it silent for decades. This is a statement piece — built to be the first thing you see and the last thing you replace." },
 
-    { id: "kohinoor-queen-bed", name: "Kohinoor Queen Bed", collection: "beds", price: 158000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A queen bed with a hand-carved headboard, brass inlay running along its arches. Small enough for the room, grand enough for the house.",
-      wood: "Sheesham with brass inlay", dimensions: "152 × 203 cm · headboard 120 cm", finish: "Dark walnut oil, antique brass",
-      made: "Carved over three weeks — floral panels chiseled by memory into the headboard, a fine brass rope inlay hammered flush along its arches. The frame is dowelled and glued in the old way, then finished in deep walnut oil until the grain gleams like still water." },
+    { id: "rajwada-carved-king", name: "Rajwada Carved King Bed", collection: "beds", price: 78000,
+      images: ["images/rajwada-carved-king-1.jpg","images/rajwada-carved-king-2.jpg","images/rajwada-carved-king-3.jpg","images/rajwada-carved-king-4.jpg","images/rajwada-carved-king-5.jpg"],
+      desc: "A tall arched headboard, hand-carved and softly tufted, on a solid wood frame. Classic havelī grandeur for a modern bedroom.",
+      wood: "Seasoned sheesham", dimensions: "King · 78 x 72 in", finish: "Hand-rubbed walnut, tufted upholstery",
+      made: "An arched headboard carved from solid sheesham, its crown worked by hand and its centre panel hand-tufted. Mortise-and-tenon joinery locks the frame — grand enough for the house, quiet enough for sleep." },
 
-    { id: "rajmahal-canopy-king", name: "Rajmahal Canopy King Bed", collection: "beds", price: 245000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A four-poster king bed with turned pillars and a fluted headboard. The room reorganises itself around it.",
-      wood: "Teak", dimensions: "193 × 203 cm · height 220 cm", finish: "Natural teak oil, hand-rubbed",
-      made: "Four turned teak pillars, each shaped on a hand lathe over two days. The fluted headboard is carved from a single wide plank. Cross-rails set with wooden pegs — no screws hold the canopy together. The entire piece can be dismantled and re-set, generation after generation, without a joint ever weakening." },
+    { id: "shalimar-tufted-king", name: "Shalimar Tufted King Bed", collection: "beds", price: 62000,
+      images: ["images/shalimar-tufted-king-1.jpg","images/shalimar-tufted-king-2.jpg"],
+      desc: "A clean king bed with a deep honeycomb-tufted headboard on a seasoned wood frame. Modern royal, softly done.",
+      wood: "Seasoned wood frame, tufted upholstery", dimensions: "King · 78 x 72 in", finish: "Matte wood, diamond-tufted headboard",
+      made: "A wide headboard hand-tufted in a diamond pattern, each button drawn through and knotted from behind. The frame is built in seasoned wood and finished to a matte satin so the eye rests on the fabric, not the joint." },
 
-    { id: "shubhra-upholstered-queen", name: "Shubhra Upholstered Queen Bed", collection: "beds", price: 142000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A quiet queen bed with a tufted velvet headboard on a seasoned sheesham frame. Modern royal, softly done.",
-      wood: "Sheesham frame, deep velvet upholstery", dimensions: "152 × 203 cm · headboard 115 cm", finish: "Matte wood, midnight velvet",
-      made: "A seasoned sheesham frame beneath a headboard hand-tufted in deep-pile midnight velvet. Each button is drawn through by hand and knotted from behind — a technique from a slower century. Legs are turned and rubbed to a matte satin so the eye rests on the fabric, not the wood." },
+    { id: "ambika-carved-king", name: "Ambika Carved King Bed", collection: "beds", price: 68000,
+      images: ["images/ambika-carved-king-1.jpg","images/ambika-carved-king-2.jpg","images/ambika-carved-king-3.jpg","images/ambika-carved-king-4.jpg","images/ambika-carved-king-5.jpg"],
+      desc: "A hand-carved king bed with a shaped headboard and matching side table. A complete, coordinated bedroom in one order.",
+      wood: "Seasoned sheesham", dimensions: "King · 78 x 72 in · side table included", finish: "Hand-rubbed walnut oil",
+      made: "Carved headboard, shaped footboard and a matching bedside table — cut from the same batch of seasoned wood so the grain stays in conversation. Made together, delivered together, meant to age together." },
+
+    { id: "chandni-upholstered-king", name: "Chandni Upholstered King Bed", collection: "beds", price: 72000,
+      images: ["images/chandni-upholstered-king-1.jpg","images/chandni-upholstered-king-2.jpg","images/chandni-upholstered-king-3.jpg","images/chandni-upholstered-king-4.jpg","images/chandni-upholstered-king-5.jpg"],
+      desc: "A carved king bed with a soft grey tufted headboard and a matching curved footboard. Restrained, elegant, easy to live with.",
+      wood: "Seasoned sheesham", dimensions: "King · 78 x 72 in", finish: "Walnut carving, grey velvet tufting",
+      made: "A hand-carved frame in warm walnut with a headboard and footboard upholstered in soft grey velvet. The carving is the drama; the colour keeps it calm. A royal silhouette that still belongs in a modern room." },
+
+    { id: "kashi-storage-king", name: "Kashi Storage King Bed", collection: "beds", price: 48000,
+      images: ["images/kashi-storage-king-1.jpg","images/kashi-storage-king-2.jpg"],
+      desc: "A practical king bed with a full storage box beneath and a clean panelled headboard. Solid wood where it counts, sensible where it helps.",
+      wood: "Seasoned wood, ply storage box", dimensions: "King · 78 x 72 in · box storage", finish: "Teak-tone laminate & solid wood",
+      made: "A honest, hard-working bed: a solid wood frame with a deep hydraulic-ready storage box beneath the mattress and a simple panelled headboard. Built for real bedrooms that need the space." },
 
     /* ---------- SOFAS ---------- */
-    { id: "rajvansh-sofa", name: "Rajvansh Royal 3-Seater Sofa", collection: "sofas", price: 145000,
-      images: ["images/rajvansh-sofa.png","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A deep, upright three-seater in seasoned sheesham with hand-tied cushioning and carved wooden arms. The kind of sofa a house is arranged around.",
-      wood: "Sheesham frame, premium fabric", dimensions: "210 × 90 × 85 cm", finish: "Hand-rubbed walnut oil, wine velvet",
-      made: "The arms are hand-carved from solid sheesham; the frame set with mortise-and-tenon joinery and dry-fit before glue. Springs are hand-tied in the old style, foam wrapped in cotton batting, wine velvet stretched and stapled by our upholstery master. Twelve weeks of drying and settling before it ships." },
+    { id: "grande-sectional-8", name: "Grande L-Sectional 8-Seater with Table", collection: "sofas", price: 138000,
+      images: ["images/grande-sectional-8-1.jpg","images/grande-sectional-8-2.jpg","images/grande-sectional-8-3.jpg"],
+      desc: "A large L-shaped sectional in soft grey with a glass-top centre table and storage ottomans. Built for the room that hosts everyone.",
+      wood: "Solid wood frame, premium fabric", dimensions: "L-sectional · seats 8 · centre table + 2 ottomans", finish: "Grey fabric, glass-top table",
+      made: "Two long runs meeting at a deep corner, seats filled by hand and finished over a solid wood frame. Comes complete with a glass-top centre table and a pair of storage ottomans — one order, one full living room." },
 
-    { id: "chandramukhi-curved-sofa", name: "Chandramukhi Curved 4-Seater", collection: "sofas", price: 235000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A crescent-curved four-seater in deep boucle. Modern lines wrapped around a hand-built solid wood frame.",
-      wood: "Sheesham frame, boucle upholstery", dimensions: "295 × 105 × 82 cm", finish: "Charcoal boucle, aged brass feet",
-      made: "The crescent is built from a curved sheesham frame steamed to shape over a wooden buck — a technique older than any factory. Deep boucle is stitched around a hand-tied seat platform. Aged brass feet are hand-cast in a Karnal foundry, polished, and pinned before delivery." },
+    { id: "windsor-tufted-5", name: "Windsor Tufted 5-Seater Set", collection: "sofas", price: 92000,
+      images: ["images/windsor-tufted-5-1.jpg","images/windsor-tufted-5-2.jpg","images/windsor-tufted-5-3.jpg","images/windsor-tufted-5-4.jpg"],
+      desc: "A beige Chesterfield-style 3+1+1 set with deep button tufting and a matching table. Timeless, upright, and endlessly welcoming.",
+      wood: "Solid wood frame, premium fabric", dimensions: "3 + 1 + 1 seater · centre table", finish: "Beige tufted upholstery",
+      made: "Rolled arms, deep diamond tufting and a tight, upright seat over a hand-built solid wood frame. A three-seater and two armchairs with a matching table — the kind of set a house is arranged around." },
 
-    { id: "devgarh-5-seater-set", name: "Devgarh 5-Seater Sofa Set with Center Table", collection: "sofas", price: 298000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A full royal set — a 3-seater and a 2-seater with a matching solid-top center table. Hand-carved arms, brass claw feet, one house-warming, done.",
-      wood: "Sheesham, brass detail", dimensions: "3+2 seater · 120×70 table", finish: "Dark walnut oil, oxblood velvet",
-      made: "A three-seater, a two-seater, and a solid-top center table — all cut from the same batch of seasoned sheesham to keep the grain in conversation. Brass claw feet are hand-cast. Arms are chiseled with fluting drawn from Rajasthani windows. Made together, delivered together, meant to age together." },
+    { id: "rajgharana-rose-5", name: "Rajgharana Carved 5-Seater · Rose", collection: "sofas", price: 85000,
+      images: ["images/rajgharana-rose-5-1.jpg","images/rajgharana-rose-5-2.jpg","images/rajgharana-rose-5-3.jpg","images/rajgharana-rose-5-4.jpg","images/rajgharana-rose-5-5.jpg"],
+      desc: "A royal carved 3+1+1 set in rose upholstery with exposed hand-carved wooden frames and arms. Colour and craft, together.",
+      wood: "Seasoned sheesham, premium fabric", dimensions: "3 + 1 + 1 seater", finish: "Polished wood, rose velvet cushions",
+      made: "Exposed sheesham frames carved by hand along the arms and back, cushioned in a soft rose velvet. The wood is the jewellery here — polished, not hidden. A set that reads as royal from across the room." },
 
-    { id: "aashray-modern-3-seater", name: "Aashray Modern 3-Seater Sofa", collection: "sofas", price: 118000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A low, clean three-seater with a solid teak base and full-grain leather. Modern silhouette, old-world frame.",
-      wood: "Teak frame, full-grain leather", dimensions: "220 × 92 × 78 cm", finish: "Natural teak, cognac leather",
-      made: "A low modern silhouette on an old-world frame. Solid teak finished in nothing but its own oil — the honey tone is the wood, not a stain. Full-grain cognac leather is hand-stitched, saddle-style, over a hand-tied seat. Six weeks to build. A lifetime to soften." },
+    { id: "padmavat-carved-5", name: "Padmavat Carved 5-Seater", collection: "sofas", price: 82000,
+      images: ["images/padmavat-carved-5-1.jpg","images/padmavat-carved-5-2.jpg"],
+      desc: "A hand-carved royal 3+1+1 sofa set with slatted wooden backs and plush cushions. Cool, airy and grand at once.",
+      wood: "Seasoned sheesham, premium fabric", dimensions: "3 + 1 + 1 seater", finish: "Polished wood, rose cushions",
+      made: "Turned legs, carved crests and slatted wooden backs finished in a warm polish, dressed with deep rose cushions. Built for long baithaks and warm afternoons." },
 
-    { id: "meherangarh-corner-sofa", name: "Meherangarh Corner Sectional", collection: "sofas", price: 215000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "An L-shape sectional built for the room that hosts everyone. Seasoned wood frame under a modern silhouette, no sag, no compromise.",
-      wood: "Sheesham frame, premium fabric", dimensions: "290 × 210 × 80 cm", finish: "Slate boucle, aged brass feet",
-      made: "Built as two independent pieces so it can be rearranged as your room changes. Sheesham frames beneath, boucle upholstery above, aged brass feet below. Every seat cushion is filled by hand and finished in a canvas liner before the outer fabric goes on — so it stays shaped, for decades." },
+    { id: "noorjahan-royal-5", name: "Noorjahan Royal 5-Seater Set", collection: "sofas", price: 98000,
+      images: ["images/noorjahan-royal-5-1.jpg","images/noorjahan-royal-5-2.jpg","images/noorjahan-royal-5-3.jpg","images/noorjahan-royal-5-4.jpg","images/noorjahan-royal-5-5.jpg"],
+      desc: "An ornate carved royal set in cream-and-silver brocade with a glass-top centre table. The full drawing-room, done in one grand gesture.",
+      wood: "Seasoned sheesham, brocade fabric", dimensions: "3 + 1 + 1 seater · centre table", finish: "Carved wood, cream brocade",
+      made: "Deeply carved arms and crests over a solid frame, upholstered in a cream-and-silver brocade and paired with a matching glass-top table. This is the centrepiece set — made for the room where guests are received." },
 
-    /* ---------- DINING ---------- */
-    { id: "annapurna-6-seater-dining", name: "Annapurna 6-Seater Dining Table", collection: "dining", price: 148000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A six-seater dining table with a two-inch solid top and temple-tapered legs. Built for twenty-five years of family meals.",
-      wood: "Mango wood, solid top", dimensions: "180 × 95 × 76 cm", finish: "Food-safe natural oil",
-      made: "The top is a single two-inch slab of solid mango wood, chosen for a live-edge grain and planed level by hand. Temple-tapered legs are drawn from South Indian temple architecture, dowelled into the apron with no metal hardware. Finished with a food-safe natural oil that will darken with the first few meals — as it should." },
+    { id: "sheeshmahal-carved-5", name: "Sheesh Mahal Carved 5-Seater", collection: "sofas", price: 88000,
+      images: ["images/sheeshmahal-carved-5-1.jpg","images/sheeshmahal-carved-5-2.jpg","images/sheeshmahal-carved-5-3.jpg","images/sheeshmahal-carved-5-4.jpg","images/sheeshmahal-carved-5-5.jpg"],
+      desc: "A carved royal sofa set in gold-and-cream with a shaped back and matching table. Old-world grandeur, ready for a modern home.",
+      wood: "Seasoned sheesham, premium fabric", dimensions: "3 + 1 + 1 seater · centre table", finish: "Gold-toned carving, cream upholstery",
+      made: "Hand-carved crests and scrolled arms finished in a warm gold tone, cushioned in cream and paired with a matching centre table. A set built to make an entrance." },
 
-    { id: "maharani-8-seater-set", name: "Maharani 8-Seater Royal Dining Set", collection: "dining", price: 335000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "An eight-seater dining set — solid sheesham table with hand-carved apron and eight upright chairs to match. The full room.",
-      wood: "Sheesham, brass detail", dimensions: "240 × 100 × 76 cm · 8 chairs", finish: "Dark walnut oil, velvet seats",
-      made: "Eight matching chairs and a solid sheesham table, built as a set. The apron is carved with a lotus and vine pattern; brass inlay runs the length of the table. Chairs are upholstered in wine velvet over hand-tied webbing. If the table extends, the leaves are cut from the same board — so the grain runs continuous, end to end." },
+    /* ---------- DRESSING TABLES ---------- */
+    { id: "teakwood-dressing", name: "Teakwood Carved Dressing Table", collection: "dressing", price: 34000,
+      images: ["images/teakwood-dressing-1.jpg","images/teakwood-dressing-2.jpg","images/teakwood-dressing-3.jpg","images/teakwood-dressing-4.jpg"],
+      desc: "A solid teak-tone dressing table with a carved crest, deep drawers and a broad mirror. Warm, polished and built to last.",
+      wood: "Solid wood, teak finish", dimensions: "Approx. 48 x 18 x 72 in with mirror", finish: "Hand-rubbed teak polish",
+      made: "A carved crest above a broad mirror, a run of deep drawers below with smooth runners and turned knobs. Finished in a warm teak polish you can feel under a fingertip." },
 
-    { id: "suryamukhi-4-seater-round", name: "Suryamukhi 4-Seater Round Dining", collection: "dining", price: 92000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A round four-seater with a solid top and a single carved pedestal. Small room, big presence.",
-      wood: "Sheesham, pedestal base", dimensions: "120 × 76 cm", finish: "Hand-rubbed matte polish",
-      made: "A round top cut from a single wide sheesham board, joined at the seam with a spline you'll never see. The pedestal is turned on a hand lathe and carved with a subtle lotus at its base. Meant for smaller rooms that still want presence at the meal." },
+    { id: "rajmahal-dressing", name: "Rajmahal Dressing Table with Mirror", collection: "dressing", price: 38000,
+      images: ["images/rajmahal-dressing-1.jpg","images/rajmahal-dressing-2.jpg","images/rajmahal-dressing-3.jpg"],
+      desc: "A carved dressing table with a shaped mirror and panelled drawer front. Quiet grandeur for a corner of the bedroom.",
+      wood: "Seasoned sheesham", dimensions: "Approx. 42 x 18 x 70 in with mirror", finish: "Dark walnut oil, brass knobs",
+      made: "A shaped mirror set into a carved sheesham frame, above panelled drawers with hand-cut joinery and brass knobs. Finished in deep walnut oil that lets the grain gleam." },
 
-    /* ---------- STORAGE ---------- */
-    { id: "padmini-dressing-table", name: "Padmini Royal Dressing Table", collection: "storage", price: 74000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A dressing table with an arched mirror, five drawers, and a hand-carved apron. Brass ring pulls, matching stool included.",
-      wood: "Sheesham, arched mirror", dimensions: "120 × 45 × 165 cm · stool 40×30×45", finish: "Dark walnut oil, brass fittings",
-      made: "An arched mirror set into a hand-carved sheesham frame; five drawers with hand-cut dovetails and antique brass ring pulls. The matching stool is upholstered in the same velvet as the drawer interiors. Fluted apron, carved feet, three weeks of joinery — a lifetime of daily use." },
+    { id: "sheesha-dressing", name: "Sheesha Carved Dressing Table", collection: "dressing", price: 32000,
+      images: ["images/sheesha-dressing-1.jpg","images/sheesha-dressing-2.jpg"],
+      desc: "An ornately carved dressing table with a scalloped mirror and stacked side drawers. As much a decor piece as a vanity.",
+      wood: "Seasoned sheesham", dimensions: "Approx. 44 x 18 x 72 in with mirror", finish: "Warm walnut, carved detailing",
+      made: "A scalloped mirror crowned with hand-carved detail, flanked by stacked drawers. The kind of piece that furnishes a corner all on its own." },
 
-    { id: "meera-vanity-dresser", name: "Meera Vanity Dresser with Mirror", collection: "storage", price: 58000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A six-drawer vanity chest with a detachable mirror. Fluted drawer fronts, brass knobs, quietly royal.",
-      wood: "Sheesham", dimensions: "110 × 45 × 150 cm", finish: "Matte walnut, antique brass",
-      made: "A six-drawer chest with fluted drawer fronts, hand-cut dovetails, and brass knobs polished by hand. The detachable mirror rests on a keyed rail — no visible hardware. Finished in matte walnut oil that lets you feel the grain under a fingertip." },
+    { id: "belaa-console-dressing", name: "Belaa Console Dressing Table", collection: "dressing", price: 36000,
+      images: ["images/belaa-console-dressing-1.jpg","images/belaa-console-dressing-2.jpg","images/belaa-console-dressing-3.jpg","images/belaa-console-dressing-4.jpg"],
+      desc: "A slim carved console with a tall arched mirror and cabriole legs. Graceful footprint, full-length reflection.",
+      wood: "Seasoned sheesham", dimensions: "Approx. 40 x 16 x 78 in with tall mirror", finish: "Hand-rubbed walnut polish",
+      made: "A tall arched mirror over a slim carved console on shaped cabriole legs. Built for smaller bedrooms that still want a little theatre at the mirror." },
 
-    { id: "rajmahal-4-door-almirah", name: "Rajmahal 4-Door Almirah", collection: "storage", price: 178000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A grand four-door almirah with hand-carved panels and a hanging section, drawers and shelves inside. The wardrobe your grandmother would have chosen.",
-      wood: "Solid sheesham, brass detail", dimensions: "200 × 60 × 210 cm", finish: "Dark walnut oil, aged brass",
-      made: "Four hand-carved doors set into a solid sheesham carcass built with hand-cut dovetails and dowelled shelves. Antique brass fittings, a fitted hanging rail, deep drawers along the base. Every panel is chiseled with the same lotus motif our workshop has been carving in Karnal for three generations." },
+    { id: "heritage-dressing", name: "Heritage Dressing Table", collection: "dressing", price: 30000,
+      images: ["images/heritage-dressing-1.jpg","images/heritage-dressing-2.jpg","images/heritage-dressing-3.jpg","images/heritage-dressing-4.jpg","images/heritage-dressing-5.jpg"],
+      desc: "A classic carved dressing table with a shaped mirror and roomy drawers, in a choice of warm and light finishes.",
+      wood: "Seasoned wood", dimensions: "Approx. 42 x 18 x 70 in with mirror", finish: "Warm walnut or ivory finish",
+      made: "A dependable, good-looking dressing table — shaped mirror, carved apron, roomy drawers — offered in both a warm walnut and a soft ivory finish to suit the room." },
 
-    { id: "devgarh-3-door-almirah", name: "Devgarh 3-Door Mirrored Almirah", collection: "storage", price: 138000,
-      images: ["images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg","images/placeholder.svg"],
-      desc: "A three-door almirah with a full-length mirror on the center door. Fluted side panels, deep interior, quiet grandeur.",
-      wood: "Sheesham", dimensions: "150 × 58 × 210 cm", finish: "Matte walnut, mirror center",
-      made: "Three doors, fluted side panels, and a full-length beveled mirror on the center door. Interior fitted with a hanging rail and adjustable shelves. Sheesham carcass, hand-cut dovetail joinery, matte walnut finish. It weighs what an almirah should — this is not flat-pack furniture." }
+    /* ---------- ALMIRAHS ---------- */
+    { id: "teakwood-2door-almirah", name: "Teakwood 2-Door Almirah", collection: "almirah", price: 52000,
+      images: ["images/teakwood-2door-almirah-1.jpg"],
+      desc: "A solid teak-tone two-door almirah with carved panels, a hanging section and interior shelves. Weighs what an almirah should.",
+      wood: "Solid wood, teak finish", dimensions: "Approx. 42 x 22 x 84 in", finish: "Hand-rubbed teak polish",
+      made: "Two carved doors on a solid carcass, fitted inside with a hanging rail and adjustable shelves. Finished in a warm teak polish — this is not flat-pack furniture." },
+
+    { id: "rajwada-4door-almirah", name: "Rajwada 4-Door Almirah", collection: "almirah", price: 82000,
+      images: ["images/rajwada-4door-almirah-1.jpg"],
+      desc: "A grand four-door almirah with mirrored and panelled doors, a hanging section, drawers and shelves. The wardrobe your grandmother would have chosen.",
+      wood: "Solid wood, laminate panels", dimensions: "Approx. 72 x 24 x 84 in", finish: "Wood-tone with mirror panels",
+      made: "Four full-height doors — mirrored and panelled — over a deep carcass fitted with a hanging rail, drawers and shelves. Storage for a whole family, in one grand piece." },
+
+    { id: "marble-3door-almirah", name: "Marble-Finish 3-Door Almirah", collection: "almirah", price: 68000,
+      images: ["images/marble-3door-almirah-1.jpg"],
+      desc: "A three-door almirah in a rich marble-pattern finish with brass handles. Modern, easy to keep, and quietly luxe.",
+      wood: "Engineered wood, marble-pattern finish", dimensions: "Approx. 54 x 22 x 84 in", finish: "Marble-pattern laminate, brass handles",
+      made: "Three tall doors in a warm marble-pattern finish with slim brass handles, over a deep fitted interior of rail, drawers and shelves. A clean, contemporary take on the family almirah." }
   ],
 
   about: {
-    title: "A Family That Grows Things",
+    title: "A House of Fine Furniture",
     paras: [
-      "We are the family behind Grace of God Organic, a working nursery in Karnal, Haryana, trusted by a community of over eight lakh gardeners across India. For years we have grown living things with patience. Vaikunth extends that patience to wood.",
-      "Every Vaikunth piece is made by hand with master carpenters of our region, in seasoned solid wood, using joinery that predates screws. We do not chase trends and we do not discount our way into homes. We make furniture worth keeping, and we stand behind every joint.",
-      "When you buy from Vaikunth, you deal directly with our family. We will know your name, your home, and your piece, for as long as you own it."
+      "Shiv Kripa Decors is a furniture house in Karnal, Haryana, bringing together the finest hand-carved solid wood furniture of our region — royal beds, sofa sets, dressing tables and almirahs — under one roof.",
+      "We choose every piece for its joinery, its grain and its finish. We do not chase trends and we do not discount our way into homes. We sell furniture worth keeping, and we stand behind every piece.",
+      "When you buy from Shiv Kripa Decors, you deal directly with us. We will know your name, your home, and your piece, for as long as you own it."
     ],
-    promise: ["Solid wood frames, honestly declared", "Direct family service on WhatsApp", "White glove delivery and placement", "Five year structural warranty"]
+    promise: ["Solid wood, honestly declared", "Direct service on WhatsApp", "Delivery and placement", "Made-to-order options available"]
   }
 };

@@ -1,4 +1,4 @@
-/* VAIKUNTH renderer — reads config.js. You should not need to edit this file. */
+/* SHIV KRIPA DECORS renderer — reads config.js. You should not need to edit this file. */
 const inr = n => "₹ " + n.toLocaleString("en-IN");
 const wa = msg => `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`;
 const q = s => document.querySelector(s);
@@ -9,7 +9,6 @@ function shell(active){
   const navItems = [
     { id:"index",       href:"index.html",              label:"Home" },
     { id:"collections", href:"collections.html",        label:"Collections" },
-    { id:"atelier",     href:"index.html#atelier-hero", label:"The Atelier" },
     { id:"about",       href:"about.html",              label:"Our Story" },
     { id:"contact",     href:"contact.html",            label:"Contact" }
   ];
@@ -22,13 +21,13 @@ function shell(active){
   q("#footer").innerHTML = `<div class="wrap">
     <div class="f-grid">
       <div><span class="logo">${SITE.brand}</span><p>${SITE.tagline}. Handcrafted solid wood furniture from ${SITE.address}.</p></div>
-      <div><div class="f-head">Explore</div><a href="collections.html">Collections</a><a href="index.html#atelier-hero">The Atelier</a><a href="about.html">Our Story</a><a href="contact.html">Contact</a></div>
-      <div><div class="f-head">Reach Us</div><a href="${wa("Namaste Vaikunth, I would like to know more.")}">WhatsApp</a><a href="mailto:${SITE.email}">${SITE.email}</a><a href="${SITE.instagram}" target="_blank">Instagram</a></div>
+      <div><div class="f-head">Explore</div><a href="collections.html">Collections</a><a href="about.html">Our Story</a><a href="contact.html">Contact</a></div>
+      <div><div class="f-head">Reach Us</div><a href="${wa("Namaste Shiv Kripa Decors, I would like to know more.")}">WhatsApp</a><a href="mailto:${SITE.email}">${SITE.email}</a><a href="${SITE.instagram}" target="_blank">Instagram</a></div>
     </div>
     <div class="f-bottom"><span>© ${new Date().getFullYear()} ${SITE.brand} · A Grace of God Organic company</span><span>${SITE.address}</span></div>
   </div>`;
   document.body.insertAdjacentHTML("beforeend",
-    `<a class="wa-float" aria-label="Chat on WhatsApp" href="${wa("Namaste Vaikunth, I am interested in your furniture.")}" target="_blank">✆</a>`);
+    `<a class="wa-float" aria-label="Chat on WhatsApp" href="${wa("Namaste Shiv Kripa Decors, I am interested in your furniture.")}" target="_blank">✆</a>`);
 }
 
 /* Product card — carries all 5 image URLs for hover cycling */
@@ -132,7 +131,7 @@ function renderProduct(){
         <dt>Warranty</dt><dd>5 year structural warranty</dd>
       </dl>
       <div class="cta-row">
-        <a class="btn" target="_blank" href="${wa(`Namaste Vaikunth, I am interested in the ${p.name} (${inr(p.price)}). Please share details.`)}">Order on WhatsApp</a>
+        <a class="btn" target="_blank" href="${wa(`Namaste Shiv Kripa Decors, I am interested in the ${p.name} (${inr(p.price)}). Please share details.`)}">Order on WhatsApp</a>
         <a class="btn ghost" href="contact.html">Ask a Question</a>
       </div>
     </div>`;
@@ -274,7 +273,7 @@ function renderAbout(){
 
 function renderContact(){
   q("#c-info").innerHTML = [
-    ["WhatsApp", SITE.phone, wa("Namaste Vaikunth, I have a question.")],
+    ["WhatsApp", SITE.phone, wa("Namaste Shiv Kripa Decors, I have a question.")],
     ["Email", SITE.email, "mailto:"+SITE.email],
     ["Visit", SITE.address, null]
   ].map(([l,v,h])=>`<div class="c-item"><div class="eyebrow">${l}</div>${h?`<a href="${h}" target="_blank">${v}</a>`:`<a>${v}</a>`}</div>`).join("");
