@@ -16,35 +16,35 @@
 const SITE = {
   brand: "SHIV KRIPA DECORS",
   tagline: "Royal furniture, made to be kept",
-  announcement: "Hand-carved solid wood furniture from Karnal, Haryana · Now taking orders across North India",
+  announcement: "Hand-carved in solid Sangwan teak — India's most prized hardwood · Made to order · Delivered across India",
 
   // Contact — your real details
   whatsapp: "919896170317",
   email: "sameergr20@gmail.com",
   phone: "+91 98961 70317",
-  address: "Karnal, Haryana, India",
+  address: "Made to order · Delivered across India",
   instagram: "https://instagram.com/shivkripadecors",
 
   hero: {
     video: "",                        // e.g. "video/hero.mp4"
     poster: "images/hero-shivkripa.jpg",
-    eyebrow: "Solid wood · Hand-carved · Karnal",
+    eyebrow: "Solid Sangwan Teak · Hand-Carved · Made To Order",
     title: "Furniture Fit\nFor A Palace",
-    sub: "Royal beds, hand-carved sofa sets, dressing tables and almirahs in seasoned solid wood. Built to last a generation, priced for a home.",
+    sub: "Royal beds, hand-carved sofa sets, dressing tables and almirahs in seasoned solid Sangwan teak — the most prized of all Indian hardwoods. Built to last a generation, priced for a home.",
     cta: "Explore The Collection"
   },
 
   story: {
-    title: "Rooted in Grace",
-    text: "Shiv Kripa Decors brings together the finest hand-carved solid wood furniture of our region under one roof. Every piece is chosen for its joinery, its grain and its finish — furniture meant to be kept, repaired, and passed on. We deal with you directly, and we stand behind every piece we sell."
+    title: "Cut From Sangwan Teak",
+    text: "Every Shiv Kripa piece is built from solid Sangwan teak — the king of Indian hardwoods. Sangwan grows slow and dense, its natural oils making it stronger, more stable and more water- and termite-resistant than ordinary wood. It is heavier to work and far harder to carve, so each piece takes many more days at the bench — but that patience is exactly why Sangwan furniture outlives the house it is bought for. We choose it for its grain, its weight and its promise: furniture meant to be kept, repaired, and passed on."
   },
 
   /* THE MAKING — real workshop photos. Edit captions or swap images here.
      Add/remove items freely; the grid adjusts on its own. */
   making: {
     eyebrow: "Inside The Workshop",
-    title: "Made By Hand, In Karnal",
-    text: "Every piece begins as seasoned solid wood and a craftsman's chisel — no CNC, no shortcuts. Floral panels pierced by hand, legs shaped by eye, joints cut to last a generation.",
+    title: "Slow-Made In Sangwan Teak",
+    text: "Every piece begins as a seasoned Sangwan teak plank and a craftsman's chisel — no CNC, no shortcuts. Sangwan is dense and unforgiving, so the carving is slow and the days are long: floral panels pierced by hand, legs shaped by eye, joints cut to last a generation.",
     images: [
       { src: "images/making-1.jpg", caption: "Carved by hand, on the workshop floor" },
       { src: "images/making-2.jpg", caption: "Chisel and mallet — never a machine" },
@@ -63,8 +63,8 @@ const SITE = {
 
   /* Kept for reference — not rendered. */
   craft: [
-    { title: "Solid Wood Frames", text: "Seasoned sheesham and teak under every piece." },
-    { title: "Hand-Carved Detail", text: "Carved by master craftsmen of our region." },
+    { title: "Solid Sangwan Teak", text: "Seasoned, slow-grown Sangwan teak under every piece." },
+    { title: "Hand-Carved Detail", text: "Carved by master craftsmen." },
     { title: "Finishes For Generations", text: "Hand-rubbed oil, premium fabric, full-grain detail." }
   ],
 
@@ -86,14 +86,14 @@ const SITE = {
     { id: "maharaja-gold-king", name: "Maharaja Gold Damask King Bed", collection: "beds", price: 95000,
       images: ["images/maharaja-gold-king-1.jpg"],
       desc: "A king bed crowned by an ornate gold-and-black damask headboard, carved and gilded along every edge. The single grandest piece a bedroom can hold.",
-      wood: "Seasoned sheesham, gilded carving", dimensions: "King · 78 x 72 in", finish: "Hand-carved, gold-leaf detailing",
-      made: "The headboard is carved by hand and finished with a damask panel framed in gold-leaf moulding. A heavy, seasoned sheesham frame beneath keeps it silent for decades. This is a statement piece — built to be the first thing you see and the last thing you replace." },
+      wood: "Seasoned Sangwan teak, gilded carving", dimensions: "King · 78 x 72 in", finish: "Hand-carved, gold-leaf detailing",
+      made: "The headboard is carved by hand and finished with a damask panel framed in gold-leaf moulding. A heavy, seasoned Sangwan teak frame beneath keeps it silent for decades. This is a statement piece — built to be the first thing you see and the last thing you replace." },
 
     { id: "rajwada-carved-king", name: "Rajwada Carved King Bed", collection: "beds", price: 78000,
       images: ["images/rajwada-carved-king-1.jpg","images/rajwada-carved-king-2.jpg","images/rajwada-carved-king-3.jpg","images/rajwada-carved-king-4.jpg","images/rajwada-carved-king-5.jpg"],
       desc: "A tall arched headboard, hand-carved and softly tufted, on a solid wood frame. Classic havelī grandeur for a modern bedroom.",
-      wood: "Seasoned sheesham", dimensions: "King · 78 x 72 in", finish: "Hand-rubbed walnut, tufted upholstery",
-      made: "An arched headboard carved from solid sheesham, its crown worked by hand and its centre panel hand-tufted. Mortise-and-tenon joinery locks the frame — grand enough for the house, quiet enough for sleep." },
+      wood: "Seasoned Sangwan teak", dimensions: "King · 78 x 72 in", finish: "Hand-rubbed walnut, tufted upholstery",
+      made: "An arched headboard carved from solid Sangwan teak, its crown worked by hand and its centre panel hand-tufted. Mortise-and-tenon joinery locks the frame — grand enough for the house, quiet enough for sleep." },
 
     { id: "shalimar-tufted-king", name: "Shalimar Tufted King Bed", collection: "beds", price: 62000,
       images: ["images/shalimar-tufted-king-1.jpg"],
@@ -104,7 +104,7 @@ const SITE = {
     { id: "chandni-upholstered-king", name: "Chandni Upholstered King Bed", collection: "beds", price: 72000,
       images: ["images/chandni-upholstered-king-1.jpg"],
       desc: "A carved king bed with a soft grey tufted headboard and a matching curved footboard. Restrained, elegant, easy to live with.",
-      wood: "Seasoned sheesham", dimensions: "King · 78 x 72 in", finish: "Walnut carving, grey velvet tufting",
+      wood: "Seasoned Sangwan teak", dimensions: "King · 78 x 72 in", finish: "Walnut carving, grey velvet tufting",
       made: "A hand-carved frame in warm walnut with a headboard and footboard upholstered in soft grey velvet. The carving is the drama; the colour keeps it calm. A royal silhouette that still belongs in a modern room." },
 
     { id: "kashi-storage-king", name: "Kashi Storage King Bed", collection: "beds", price: 48000,
@@ -129,25 +129,25 @@ const SITE = {
     { id: "rajgharana-rose-5", name: "Rajgharana Carved 5-Seater · Rose", collection: "sofas", price: 85000,
       images: ["images/rajgharana-rose-5-1.jpg"],
       desc: "A royal carved 3+1+1 set in rose upholstery with exposed hand-carved wooden frames and arms. Colour and craft, together.",
-      wood: "Seasoned sheesham, premium fabric", dimensions: "3 + 1 + 1 seater", finish: "Polished wood, rose velvet cushions",
-      made: "Exposed sheesham frames carved by hand along the arms and back, cushioned in a soft rose velvet. The wood is the jewellery here — polished, not hidden. A set that reads as royal from across the room." },
+      wood: "Seasoned Sangwan teak, premium fabric", dimensions: "3 + 1 + 1 seater", finish: "Polished wood, rose velvet cushions",
+      made: "Exposed Sangwan teak frames carved by hand along the arms and back, cushioned in a soft rose velvet. The wood is the jewellery here — polished, not hidden. A set that reads as royal from across the room." },
 
     { id: "padmavat-carved-5", name: "Padmavat Carved 5-Seater", collection: "sofas", price: 82000,
       images: ["images/padmavat-carved-5-1.jpg"],
       desc: "A hand-carved royal 3+1+1 sofa set with slatted wooden backs and plush cushions. Cool, airy and grand at once.",
-      wood: "Seasoned sheesham, premium fabric", dimensions: "3 + 1 + 1 seater", finish: "Polished wood, rose cushions",
+      wood: "Seasoned Sangwan teak, premium fabric", dimensions: "3 + 1 + 1 seater", finish: "Polished wood, rose cushions",
       made: "Turned legs, carved crests and slatted wooden backs finished in a warm polish, dressed with deep rose cushions. Built for long baithaks and warm afternoons." },
 
     { id: "noorjahan-royal-5", name: "Noorjahan Royal 5-Seater Set", collection: "sofas", price: 98000,
       images: ["images/noorjahan-royal-5-1.jpg"],
       desc: "An ornate carved royal set in cream-and-silver brocade with a glass-top centre table. The full drawing-room, done in one grand gesture.",
-      wood: "Seasoned sheesham, brocade fabric", dimensions: "3 + 1 + 1 seater · centre table", finish: "Carved wood, cream brocade",
+      wood: "Seasoned Sangwan teak, brocade fabric", dimensions: "3 + 1 + 1 seater · centre table", finish: "Carved wood, cream brocade",
       made: "Deeply carved arms and crests over a solid frame, upholstered in a cream-and-silver brocade and paired with a matching glass-top table. This is the centrepiece set — made for the room where guests are received." },
 
     { id: "sheeshmahal-carved-5", name: "Sheesh Mahal Carved 5-Seater", collection: "sofas", price: 88000,
       images: ["images/sheeshmahal-carved-5-1.jpg"],
       desc: "A carved royal sofa set in gold-and-cream with a shaped back and matching table. Old-world grandeur, ready for a modern home.",
-      wood: "Seasoned sheesham, premium fabric", dimensions: "3 + 1 + 1 seater · centre table", finish: "Gold-toned carving, cream upholstery",
+      wood: "Seasoned Sangwan teak, premium fabric", dimensions: "3 + 1 + 1 seater · centre table", finish: "Gold-toned carving, cream upholstery",
       made: "Hand-carved crests and scrolled arms finished in a warm gold tone, cushioned in cream and paired with a matching centre table. A set built to make an entrance." },
 
     /* ---------- DRESSING TABLES ---------- */
@@ -160,19 +160,19 @@ const SITE = {
     { id: "rajmahal-dressing", name: "Rajmahal Dressing Table with Mirror", collection: "dressing", price: 38000,
       images: ["images/rajmahal-dressing-1.jpg"],
       desc: "A carved dressing table with a shaped mirror and panelled drawer front. Quiet grandeur for a corner of the bedroom.",
-      wood: "Seasoned sheesham", dimensions: "Approx. 42 x 18 x 70 in with mirror", finish: "Dark walnut oil, brass knobs",
-      made: "A shaped mirror set into a carved sheesham frame, above panelled drawers with hand-cut joinery and brass knobs. Finished in deep walnut oil that lets the grain gleam." },
+      wood: "Seasoned Sangwan teak", dimensions: "Approx. 42 x 18 x 70 in with mirror", finish: "Dark walnut oil, brass knobs",
+      made: "A shaped mirror set into a carved Sangwan teak frame, above panelled drawers with hand-cut joinery and brass knobs. Finished in deep walnut oil that lets the grain gleam." },
 
     { id: "sheesha-dressing", name: "Sheesha Carved Dressing Table", collection: "dressing", price: 32000,
       images: ["images/sheesha-dressing-1.jpg"],
       desc: "An ornately carved dressing table with a scalloped mirror and stacked side drawers. As much a decor piece as a vanity.",
-      wood: "Seasoned sheesham", dimensions: "Approx. 44 x 18 x 72 in with mirror", finish: "Warm walnut, carved detailing",
+      wood: "Seasoned Sangwan teak", dimensions: "Approx. 44 x 18 x 72 in with mirror", finish: "Warm walnut, carved detailing",
       made: "A scalloped mirror crowned with hand-carved detail, flanked by stacked drawers. The kind of piece that furnishes a corner all on its own." },
 
     { id: "belaa-console-dressing", name: "Belaa Console Dressing Table", collection: "dressing", price: 36000,
       images: ["images/belaa-console-dressing-1.jpg"],
       desc: "A slim carved console with a tall arched mirror and cabriole legs. Graceful footprint, full-length reflection.",
-      wood: "Seasoned sheesham", dimensions: "Approx. 40 x 16 x 78 in with tall mirror", finish: "Hand-rubbed walnut polish",
+      wood: "Seasoned Sangwan teak", dimensions: "Approx. 40 x 16 x 78 in with tall mirror", finish: "Hand-rubbed walnut polish",
       made: "A tall arched mirror over a slim carved console on shaped cabriole legs. Built for smaller bedrooms that still want a little theatre at the mirror." },
 
     { id: "heritage-dressing", name: "Heritage Dressing Table", collection: "dressing", price: 30000,
@@ -210,19 +210,19 @@ const SITE = {
     { id: "shalini-grey-king", name: "Shalini Grey Carved King Bed", collection: "beds", price: 82000,
       images: ["images/shalini-grey-king-1.jpg"],
       desc: "A hand-carved king bed with a soft grey tufted headboard and carved footboard. Royal lines, restful colour.",
-      wood: "Seasoned sheesham", dimensions: "King · 78 x 72 in", finish: "Walnut carving, grey tufting",
+      wood: "Seasoned Sangwan teak", dimensions: "King · 78 x 72 in", finish: "Walnut carving, grey tufting",
       made: "Carved by hand in warm walnut with a grey velvet tufted headboard and footboard. The carving is the drama; the colour keeps it calm." },
 
     { id: "noor-cream-king", name: "Noor Cream Tufted King Bed", collection: "beds", price: 72000,
       images: ["images/noor-cream-king-1.jpg"],
       desc: "A carved king bed with a cream-tufted headboard and a scrolled footboard. Soft, warm and quietly grand.",
-      wood: "Seasoned sheesham", dimensions: "King · 78 x 72 in", finish: "Hand-rubbed walnut, cream tufting",
+      wood: "Seasoned Sangwan teak", dimensions: "King · 78 x 72 in", finish: "Hand-rubbed walnut, cream tufting",
       made: "A scrolled, hand-carved frame cushioned in cream tufting — a warm, welcoming centrepiece for a master bedroom." },
 
     { id: "gulzar-carved-king", name: "Gulzar Carved King Bed", collection: "beds", price: 78000,
       images: ["images/gulzar-carved-king-1.jpg"],
       desc: "An ornately carved king bed with a tufted headboard framed by a mirror crest. Old-world grandeur, richly detailed.",
-      wood: "Seasoned sheesham", dimensions: "King · 78 x 72 in", finish: "Dark walnut, tufted upholstery",
+      wood: "Seasoned Sangwan teak", dimensions: "King · 78 x 72 in", finish: "Dark walnut, tufted upholstery",
       made: "Deeply carved crest and posts around a buttoned tufted headboard — a bed that furnishes the whole room on its own." },
 
     { id: "mewar-maroon-king", name: "Mewar Maroon Velvet King Bed", collection: "beds", price: 88000,
@@ -234,19 +234,19 @@ const SITE = {
     { id: "roshan-ivory-king", name: "Roshan Ivory Carved King Bed", collection: "beds", price: 96000,
       images: ["images/roshan-ivory-king-1.jpg"],
       desc: "An ivory-and-gold carved king bed with a deep tufted headboard. The grandest silhouette in the collection.",
-      wood: "Seasoned sheesham, ivory-gold finish", dimensions: "King · 78 x 72 in", finish: "Ivory lacquer, gold-leaf detail",
+      wood: "Seasoned Sangwan teak, ivory-gold finish", dimensions: "King · 78 x 72 in", finish: "Ivory lacquer, gold-leaf detail",
       made: "An ivory-and-gold hand-carved frame around a deep tufted headboard — palace furniture, made for a room that wants a statement." },
 
     { id: "neelkanth-blue-king", name: "Neelkanth Blue & Gold King Bed", collection: "beds", price: 92000,
       images: ["images/neelkanth-blue-king-1.jpg"],
       desc: "A carved king bed in royal blue with gold detailing. Bold, distinctive, unforgettable.",
-      wood: "Seasoned sheesham, gold detailing", dimensions: "King · 78 x 72 in", finish: "Royal blue upholstery, gold leaf",
+      wood: "Seasoned Sangwan teak, gold detailing", dimensions: "King · 78 x 72 in", finish: "Royal blue upholstery, gold leaf",
       made: "Royal blue upholstery set into a hand-carved, gold-touched frame. For the bedroom that wants colour as much as craft." },
 
     { id: "rani-blush-king", name: "Rani Blush Carved King Bed", collection: "beds", price: 85000,
       images: ["images/rani-blush-king-1.jpg"],
       desc: "A hand-carved king bed with a soft blush tufted headboard and scrolled footboard. Warm, feminine and royal.",
-      wood: "Seasoned sheesham", dimensions: "King · 78 x 72 in", finish: "Warm walnut, blush tufting",
+      wood: "Seasoned Sangwan teak", dimensions: "King · 78 x 72 in", finish: "Warm walnut, blush tufting",
       made: "A scrolled, hand-carved frame cushioned in blush velvet tufting — soft colour on serious craftsmanship." },
 
     { id: "firoza-storage-king", name: "Firoza Storage King Bed", collection: "beds", price: 46000,
@@ -295,19 +295,19 @@ const SITE = {
     { id: "meenakshi-ivory-5", name: "Meenakshi Ivory Brocade 5-Seater", collection: "sofas", price: 105000,
       images: ["images/meenakshi-ivory-5-1.jpg"],
       desc: "A carved royal set in ivory floral brocade with a matching table. Understated grandeur.",
-      wood: "Seasoned sheesham, brocade fabric", dimensions: "3 + 1 + 1 seater · centre table", finish: "Carved wood, ivory brocade",
+      wood: "Seasoned Sangwan teak, brocade fabric", dimensions: "3 + 1 + 1 seater · centre table", finish: "Carved wood, ivory brocade",
       made: "Hand-carved wooden frames upholstered in ivory floral brocade — a refined royal set for the room where guests are received." },
 
     { id: "badshah-royal-5", name: "Badshah Royal Carved 5-Seater", collection: "sofas", price: 135000,
       images: ["images/badshah-royal-5-1.jpg"],
       desc: "An ornate gilded carved set in deep upholstery with a matching centre table. The most regal set we make.",
-      wood: "Seasoned sheesham, gilded carving", dimensions: "3 + 1 + 1 seater · centre table", finish: "Gilded carving, deep upholstery",
+      wood: "Seasoned Sangwan teak, gilded carving", dimensions: "3 + 1 + 1 seater · centre table", finish: "Gilded carving, deep upholstery",
       made: "The showpiece: deeply carved and gilded frames, rich upholstery and a matching table, made together for a grand drawing room." },
 
     { id: "darbar-cream-5", name: "Darbar Cream & Gold 5-Seater", collection: "sofas", price: 118000,
       images: ["images/darbar-cream-5-1.jpg"],
       desc: "A carved cream-and-gold royal set with scrolled arms and a matching table. Warm, opulent, timeless.",
-      wood: "Seasoned sheesham, gold-toned carving", dimensions: "3 + 1 + 1 seater · centre table", finish: "Gold-toned carving, cream upholstery",
+      wood: "Seasoned Sangwan teak, gold-toned carving", dimensions: "3 + 1 + 1 seater · centre table", finish: "Gold-toned carving, cream upholstery",
       made: "Scrolled, gold-toned carved arms and cream upholstery, cut and built as a set — old-world opulence for a modern haveli." },
 
     { id: "vanraj-teak-5", name: "Vanraj Teakwood 5-Seater", collection: "sofas", price: 95000,
@@ -327,10 +327,10 @@ const SITE = {
   about: {
     title: "A House of Fine Furniture",
     paras: [
-      "Shiv Kripa Decors is a furniture house in Karnal, Haryana, bringing together the finest hand-carved solid wood furniture of our region — royal beds, sofa sets, dressing tables and almirahs — under one roof.",
-      "We choose every piece for its joinery, its grain and its finish. We do not chase trends and we do not discount our way into homes. We sell furniture worth keeping, and we stand behind every piece.",
+      "Shiv Kripa Decors is a house of fine, hand-carved furniture built in solid Sangwan teak — royal beds, sofa sets, dressing tables and almirahs, all under one roof.",
+      "We work only in Sangwan teak because it is the finest hardwood India grows: slow, dense and oil-rich, it resists water and termites and holds its shape for decades. It is harder to carve and slower to build, and we would not have it any other way. We do not chase trends and we do not discount our way into homes. We sell furniture worth keeping, and we stand behind every piece.",
       "When you buy from Shiv Kripa Decors, you deal directly with us. We will know your name, your home, and your piece, for as long as you own it."
     ],
-    promise: ["Solid wood, honestly declared", "Direct service on WhatsApp", "Delivery and placement", "Made-to-order options available"]
+    promise: ["Solid Sangwan teak, honestly declared", "Direct service on WhatsApp", "Delivery and placement", "Made-to-order options available"]
   }
 };

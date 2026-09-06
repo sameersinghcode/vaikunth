@@ -2,6 +2,22 @@
 const inr = n => "₹ " + n.toLocaleString("en-IN");
 const wa = msg => `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`;
 const q = s => document.querySelector(s);
+
+/* ---- Light / Dark theme (default = dark; choice saved per visitor) ---- */
+const SUN_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5 5l1.6 1.6M17.4 17.4L19 19M19 5l-1.6 1.6M6.6 17.4L5 19"/></svg>`;
+const MOON_SVG = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>`;
+const currentTheme = () => document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+function paintThemeIcon(){
+  const b = document.getElementById("themeToggle");
+  if(b) b.innerHTML = currentTheme() === "dark" ? SUN_SVG : MOON_SVG;   // show the mode you'll switch TO
+}
+function setTheme(t){
+  const root = document.documentElement;
+  if(t === "light") root.setAttribute("data-theme", "light");
+  else root.setAttribute("data-theme", "dark");
+  try{ localStorage.setItem("sk-theme", t); }catch(e){}
+  paintThemeIcon();
+}
 const primary = p => (p.images && p.images[0]) || p.image || "images/placeholder.svg";
 
 function shell(active){
@@ -15,17 +31,23 @@ function shell(active){
   ];
   q("#nav").innerHTML = `<div class="wrap nav-in">
     <a class="logo" href="index.html">${SITE.brand}</a>
-    <button class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-    <div class="nav-links">
-      ${navItems.map(n=>`<a href="${n.href}" class="${active===n.id?"on":""}">${n.label}</a>`).join("")}
+    <div class="nav-right">
+      <div class="nav-links">
+        ${navItems.map(n=>`<a href="${n.href}" class="${active===n.id?"on":""}">${n.label}</a>`).join("")}
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch between light and dark mode" title="Light / Dark"></button>
+      <button class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     </div></div>`;
+  const tt = q("#themeToggle");
+  if(tt) tt.addEventListener("click", () => setTheme(currentTheme()==="dark" ? "light" : "dark"));
+  paintThemeIcon();
   q("#footer").innerHTML = `<div class="wrap">
     <div class="f-grid">
-      <div><span class="logo">${SITE.brand}</span><p>${SITE.tagline}. Handcrafted solid wood furniture from ${SITE.address}.</p></div>
+      <div><span class="logo">${SITE.brand}</span><p>${SITE.tagline}. Hand-carved furniture in solid Sangwan teak.</p></div>
       <div><div class="f-head">Explore</div><a href="collections.html">Collections</a><a href="about.html">Our Story</a><a href="contact.html">Contact</a></div>
       <div><div class="f-head">Reach Us</div><a href="${wa("Namaste Shiv Kripa Decors, I would like to know more.")}">WhatsApp</a><a href="mailto:${SITE.email}">${SITE.email}</a><a href="${SITE.instagram}" target="_blank">Instagram</a></div>
     </div>
-    <div class="f-bottom"><span>© ${new Date().getFullYear()} ${SITE.brand} · A Grace of God Organic company</span><span>${SITE.address}</span></div>
+    <div class="f-bottom"><span>© ${new Date().getFullYear()} ${SITE.brand} · A Grace of God Organic company</span><span>Solid Sangwan Teak · Made To Order</span></div>
   </div>`;
   document.body.insertAdjacentHTML("beforeend",
     `<a class="wa-float" aria-label="Chat on WhatsApp" href="${wa("Namaste Shiv Kripa Decors, I am interested in your furniture.")}" target="_blank">✆</a>`);
@@ -288,7 +310,7 @@ function renderContact(){
   q("#c-info").innerHTML = [
     ["WhatsApp", SITE.phone, wa("Namaste Shiv Kripa Decors, I have a question.")],
     ["Email", SITE.email, "mailto:"+SITE.email],
-    ["Visit", SITE.address, null]
+    ["Orders", SITE.address, null]
   ].map(([l,v,h])=>`<div class="c-item"><div class="eyebrow">${l}</div>${h?`<a href="${h}" target="_blank">${v}</a>`:`<a>${v}</a>`}</div>`).join("");
   q("#c-form").addEventListener("submit",e=>{
     e.preventDefault();
