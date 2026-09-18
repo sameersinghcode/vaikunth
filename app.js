@@ -30,7 +30,7 @@ function shell(active){
     { id:"contact",     href:"contact.html",            label:"Contact" }
   ];
   q("#nav").innerHTML = `<div class="wrap nav-in">
-    <a class="logo" href="index.html">${SITE.brand}</a>
+    <a class="logo brandlock" href="index.html"><img class="lmark" src="images/logo-mark.png" alt="Shiv Kripa Decors logo"><span>${SITE.brand}</span></a>
     <div class="nav-right">
       <div class="nav-links">
         ${navItems.map(n=>`<a href="${n.href}" class="${active===n.id?"on":""}">${n.label}</a>`).join("")}
