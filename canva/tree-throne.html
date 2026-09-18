@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<title>Tree to Throne</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Marcellus&family=Figtree:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,900&display=swap">
+<style>
+/* SHIV KRIPA DECORS — social creative brand kit (Emerald & Gold) */
+:root{
+  --ink:#0E1A14; --ink-2:#142219; --ink-3:#17281E; --ink-rgb:14,26,20;
+  --gold:#C9A24B; --gold-soft:#A6842F; --gold-rgb:201,162,75;
+  --emerald:#1F5140; --ivory:#EDE4C8; --sage:#9DB0A2;
+  --line:rgba(201,162,75,.32); --line-soft:rgba(201,162,75,.18);
+  --display:'Cormorant Garamond',serif; --serif2:'Marcellus',serif; --body:'Figtree',sans-serif;
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='7' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.79  0 0 0 0 0.64  0 0 0 0 0.29  0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--ink)}
+.canvas{position:relative;overflow:hidden;background:var(--ink);color:var(--ivory);font-family:var(--body);font-weight:300}
+.canvas::after{content:"";position:absolute;inset:0;background:var(--grain);opacity:.5;mix-blend-mode:overlay;pointer-events:none;z-index:9}
+/* shared brand marks */
+.logo{font-family:var(--serif2);color:var(--gold);letter-spacing:.34em;font-weight:400}
+.rule{height:1px;background:var(--line)}
+.eyebrow{font-family:var(--body);text-transform:uppercase;color:var(--gold);font-weight:500}
+.serif{font-family:var(--display);font-weight:500;line-height:1.04;color:var(--ivory)}
+.corner{position:absolute;width:54px;height:54px;border:1.5px solid var(--line);z-index:8}
+.photo{position:absolute;background-size:cover;background-position:center}
+.vign{position:absolute;inset:0;pointer-events:none}
+
+
+  .canvas{width:1080px;height:1350px;background:var(--ink)}
+  .glow{position:absolute;inset:0;background:radial-gradient(72% 55% at 50% 2%,rgba(var(--gold-rgb),.10),transparent 60%);z-index:1}
+  .photo.full{inset:0}
+  .photo.top{inset:0 0 560px 0}
+  .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(var(--ink-rgb),.5),rgba(var(--ink-rgb),.28) 38%,rgba(var(--ink-rgb),.95));z-index:2}
+  .photo-line{position:absolute;left:0;right:0;top:520px;height:1px;background:var(--line);z-index:5}
+  .photo.top::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,var(--ink))}
+  .hdr{position:absolute;top:52px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;z-index:8}
+  .hdr .logo{font-size:20px;letter-spacing:.3em}
+  .hdr .idx{font-family:var(--body);font-size:15px;letter-spacing:.24em;color:var(--gold);font-weight:600}
+  .hdr .idx i{font-style:normal;opacity:.5;margin:0 2px}
+  .corner{width:44px;height:44px}
+  .corner.tl{top:40px;left:40px;border-right:none;border-bottom:none}.corner.tr{top:40px;right:40px;border-left:none;border-bottom:none}
+  .corner.bl{bottom:40px;left:40px;border-right:none;border-top:none}.corner.br{bottom:40px;right:40px;border-left:none;border-top:none}
+  .kick{font-family:var(--body);text-transform:uppercase;color:var(--gold);font-weight:700;font-size:19px;letter-spacing:.22em;margin-bottom:24px}
+  .kick.sm{font-size:16px;margin-bottom:14px}
+  .hook{font-family:'Playfair Display',serif;font-weight:900;color:var(--ivory);letter-spacing:-.015em;line-height:.92;font-size:104px}
+  .hook.mid{font-size:88px}.hook.sm2{font-size:74px;line-height:.98}
+  .hook em{font-style:italic;color:var(--gold)}
+  .serif{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--ivory);line-height:1.0;font-size:70px;letter-spacing:.004em}
+  .wrap{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 80px;z-index:6}
+  .wrap.center{text-align:center;align-items:center}
+  .hsub{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:44px;color:var(--sage);margin-top:30px;line-height:1.16}
+  .factbody{font-family:var(--body);font-weight:300;font-size:27px;line-height:1.5;color:var(--sage);margin-top:30px;max-width:820px}
+  .cover-body{position:absolute;left:64px;right:64px;bottom:104px;z-index:8}
+  .cover-body.center2{text-align:center;left:60px;right:60px;bottom:130px}
+  .pbody{position:absolute;left:64px;right:64px;bottom:92px;z-index:8}
+  .pbody.center{text-align:center;left:80px;right:80px}
+  .pbody h2{margin-bottom:22px}
+  .pbody .body{font-family:var(--body);font-weight:300;font-size:26px;line-height:1.5;color:var(--sage);max-width:900px}
+  .pbody .coll{font-family:var(--serif2);font-size:23px;color:var(--gold);letter-spacing:.05em;margin:4px 0 28px}
+  .bigprice{font-family:'Playfair Display',serif;font-weight:900;font-size:150px;color:var(--gold);line-height:1;letter-spacing:.01em;text-shadow:0 14px 40px rgba(0,0,0,.5)}
+  .reveal-sub{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--ivory);margin:14px 0 30px}
+  .swipe{margin-top:30px;font-family:var(--body);font-size:16px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .swipe span{margin-left:6px}
+  .foot{position:absolute;left:80px;right:80px;bottom:120px;z-index:8}
+  .foot .line{font-family:var(--body);font-weight:600;font-size:27px;color:var(--ivory);margin-bottom:12px}
+  .thumb{position:absolute;right:80px;bottom:140px;width:210px;height:262px;background-size:cover;background-position:center;border:1.5px solid var(--line);z-index:5;box-shadow:0 24px 50px -18px #000}
+  .cta{display:inline-block;font-family:var(--body);font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--ivory);border:1px solid var(--line);padding:15px 28px}
+  .bio{font-family:var(--body);font-size:16px;color:var(--sage);letter-spacing:.05em;margin-top:18px}
+
+body{margin:0;background:#0E1A14}
+.canvas{margin:0 auto 40px}
+</style></head>
+<body>
+<div class="canvas" data-document-role="page" data-label="Tree to Throne — 1/5">
+  <div class="photo full" style="background-image:url('https://shivkripadecors.com/images/making-1.jpg')"></div><div class="scrim"></div>
+  <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+  <div class="hdr"><span class="logo">SHIV KRIPA DECORS</span><span class="idx">01 <i>/</i> 05</span></div>
+  <div class="cover-body"><div class="kick">Could you believe this is handmade?</div><h1 class="hook mid">Watch a tree<br>become a <em>throne.</em></h1><div class="swipe">Swipe <span>→</span></div></div></div>
+<div class="canvas" data-document-role="page" data-label="Tree to Throne — 2/5">
+  <div class="photo top" style="background-image:url('https://shivkripadecors.com/images/making-2.jpg')"></div><div class="photo-line"></div>
+  <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+  <div class="hdr"><span class="logo">SHIV KRIPA DECORS</span><span class="idx">02 <i>/</i> 05</span></div>
+  <div class="pbody"><div class="kick sm">Step 1</div><h2 class="serif">A plank<br>& a chisel</h2><div class="body">No machines. Every Shiv Kripa piece begins as a seasoned Sangwan teak plank and a craftsman's chisel.</div></div></div>
+<div class="canvas" data-document-role="page" data-label="Tree to Throne — 3/5">
+  <div class="photo top" style="background-image:url('https://shivkripadecors.com/images/making-4.jpg')"></div><div class="photo-line"></div>
+  <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+  <div class="hdr"><span class="logo">SHIV KRIPA DECORS</span><span class="idx">03 <i>/</i> 05</span></div>
+  <div class="pbody"><div class="kick sm">Step 2</div><h2 class="serif">Pierced<br>by hand</h2><div class="body">Each floral panel is cut and carved by eye — the kind of detail a machine simply can't fake.</div></div></div>
+<div class="canvas" data-document-role="page" data-label="Tree to Throne — 4/5"><div class="glow"></div>
+  <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+  <div class="hdr"><span class="logo">SHIV KRIPA DECORS</span><span class="idx">04 <i>/</i> 05</span></div>
+  <div class="wrap center"><div class="kick">A little history</div><h2 class="hook sm2">Teak decked British<br>warships for 100 years.</h2><div class="factbody">The same dense, weatherproof hardwood that survived the open sea… now carved into your headboard.</div></div></div>
+<div class="canvas" data-document-role="page" data-label="Tree to Throne — 5/5">
+  <div class="photo top" style="background-image:url('https://shivkripadecors.com/images/rajwada-carved-king-3.jpg')"></div><div class="photo-line"></div>
+  <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+  <div class="hdr"><span class="logo">SHIV KRIPA DECORS</span><span class="idx">05 <i>/</i> 05</span></div>
+  <div class="pbody center"><h2 class="serif">Made to<br>outlive you.</h2>
+    <div class="coll">Hand-carved in solid Sangwan teak</div>
+    <div class="cta">Shop the collection · shivkripadecors.com</div>
+    <div class="bio">Full catalogue at the link in bio</div></div></div>
+</body></html>

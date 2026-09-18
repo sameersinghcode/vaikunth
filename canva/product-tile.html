@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<title>Product Tile Template</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Marcellus&family=Figtree:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,900&display=swap">
+<style>
+/* SHIV KRIPA DECORS — social creative brand kit (Emerald & Gold) */
+:root{
+  --ink:#0E1A14; --ink-2:#142219; --ink-3:#17281E; --ink-rgb:14,26,20;
+  --gold:#C9A24B; --gold-soft:#A6842F; --gold-rgb:201,162,75;
+  --emerald:#1F5140; --ivory:#EDE4C8; --sage:#9DB0A2;
+  --line:rgba(201,162,75,.32); --line-soft:rgba(201,162,75,.18);
+  --display:'Cormorant Garamond',serif; --serif2:'Marcellus',serif; --body:'Figtree',sans-serif;
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='7' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.79  0 0 0 0 0.64  0 0 0 0 0.29  0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--ink)}
+.canvas{position:relative;overflow:hidden;background:var(--ink);color:var(--ivory);font-family:var(--body);font-weight:300}
+.canvas::after{content:"";position:absolute;inset:0;background:var(--grain);opacity:.5;mix-blend-mode:overlay;pointer-events:none;z-index:9}
+/* shared brand marks */
+.logo{font-family:var(--serif2);color:var(--gold);letter-spacing:.34em;font-weight:400}
+.rule{height:1px;background:var(--line)}
+.eyebrow{font-family:var(--body);text-transform:uppercase;color:var(--gold);font-weight:500}
+.serif{font-family:var(--display);font-weight:500;line-height:1.04;color:var(--ivory)}
+.corner{position:absolute;width:54px;height:54px;border:1.5px solid var(--line);z-index:8}
+.photo{position:absolute;background-size:cover;background-position:center}
+.vign{position:absolute;inset:0;pointer-events:none}
+
+
+  .canvas{width:1080px;height:1350px}
+  /* photo occupies top region */
+  .photo{inset:0 0 372px 0}
+  .photo-frame{position:absolute;inset:34px 34px 406px 34px;border:1.5px solid var(--line);z-index:7;pointer-events:none}
+  .fade{position:absolute;left:0;right:0;bottom:372px;height:260px;background:linear-gradient(to bottom,transparent,rgba(var(--ink-rgb),.55) 55%,var(--ink));z-index:6}
+  /* top brand bar */
+  .top{position:absolute;top:52px;left:0;right:0;text-align:center;z-index:8}
+  .top .logo{font-size:30px}
+  .top .tag{font-family:var(--body);font-size:14.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--sage);margin-top:14px}
+  /* bottom text block */
+  .foot{position:absolute;left:0;right:0;bottom:0;height:372px;z-index:8;padding:0 64px 56px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center}
+  .foot .coll{font-size:15px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:20px}
+  .foot h1{font-family:var(--display);font-weight:500;font-size:64px;line-height:1.02;color:var(--ivory);letter-spacing:.004em}
+  .foot .sub{font-size:19px;color:var(--sage);margin-top:16px;font-weight:300;letter-spacing:.01em}
+  .divider{display:flex;align-items:center;gap:18px;margin:26px 0 22px}
+  .divider .l{width:46px;height:1px;background:var(--line)}
+  .divider .d{width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+  .price{font-family:var(--serif2);font-size:26px;color:var(--gold);letter-spacing:.06em}
+  .cta{margin-top:26px;font-family:var(--body);font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--ivory);border:1px solid var(--line);padding:15px 34px}
+
+body{margin:0;background:#0E1A14}
+.canvas{margin:0 auto 40px}
+</style></head>
+<body>
+<div class="canvas" data-document-role="page" data-label="Product Tile Template">
+  <div class="photo" style="background-image:url('https://shivkripadecors.com/images/rajwada-carved-king-1.jpg')"></div>
+  <div class="topfade" style="position:absolute;top:0;left:0;right:0;height:230px;background:linear-gradient(to bottom,rgba(var(--ink-rgb),.62),transparent);z-index:5"></div>
+  <div class="fade"></div>
+  <div class="photo-frame"></div>
+  <div class="corner" style="top:34px;left:34px;border-right:none;border-bottom:none"></div>
+  <div class="corner" style="top:34px;right:34px;border-left:none;border-bottom:none"></div>
+
+  <div class="top">
+    <div class="logo">SHIV KRIPA DECORS</div>
+    <div class="tag">Solid Sangwan Teak</div>
+  </div>
+
+  <div class="foot">
+    <div class="coll">Royal Beds</div>
+    <h1>Rajwada Carved King</h1>
+    <div class="sub">Hand-carved in seasoned Sangwan teak</div>
+    <div class="divider"><span class="l"></span><span class="d"></span><span class="l"></span></div>
+    <div class="price">₹ 78,000</div>
+    <div class="cta">Shop at shivkripadecors.com</div>
+  </div>
+</div>
+</body></html>
