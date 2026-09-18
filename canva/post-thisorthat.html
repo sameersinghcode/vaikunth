@@ -26,9 +26,10 @@ html,body{background:var(--ink)}
 
 
   .canvas{width:1080px;height:1350px;background:var(--ink)}
-  .half{position:absolute;left:0;right:0;height:620px;background-size:cover;background-position:center}
-  .half.top{top:0;background-image:url('file:///Users/sameer/Downloads/vaikunth/images/badshah-royal-5-1.jpg')}
-  .half.bot{top:620px;height:730px;background-image:url('file:///Users/sameer/Downloads/vaikunth/images/meenakshi-ivory-5-1.jpg')}
+  .half{position:absolute;left:0;right:0;height:620px;overflow:hidden}
+  .half.top{top:0}
+  .half.bot{top:620px;height:730px}
+  .half .himg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
   .half.top::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(var(--ink-rgb),.45),transparent 45%)}
   .half.bot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(var(--ink-rgb),.55) 62%,rgba(var(--ink-rgb),.97))}
   .badge{position:absolute;left:56px;z-index:6;width:76px;height:76px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:900;font-size:44px}
@@ -51,7 +52,8 @@ body{margin:0;background:#0E1A14}
 </style></head>
 <body>
 <div class="canvas" data-document-role="page" data-label="This or That">
-  <div class="half top"></div><div class="half bot"></div>
+  <div class="half top"><img class="himg" src="https://shivkripadecors.com/images/badshah-royal-5-1.jpg" alt="Option A sofa"></div>
+  <div class="half bot"><img class="himg" src="https://shivkripadecors.com/images/meenakshi-ivory-5-1.jpg" alt="Option B sofa"></div>
   <div class="badge a">A</div><div class="badge b">B</div>
   <div class="ordisc">OR</div>
   <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
